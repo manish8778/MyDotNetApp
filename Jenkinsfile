@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_ROOT = "/usr/share/dotnet"
+        DOTNET_ROOT = "C:\Program Files\dotnet"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/username/MyDotNetApp.git'
+                git branch: 'master', url: 'https://github.com/manish8778/MyDotNetApp.git'
             }
         }
 
