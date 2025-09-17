@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DOTNET_ROOT = "C:\Program Files\dotnet"
+        DOTNET_ROOT = "C:\\Program Files\\dotnet"
     }
+	
 
     stages {
         stage('Checkout') {
