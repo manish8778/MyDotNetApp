@@ -46,7 +46,7 @@ pipeline {
 		
 		stage('Commit and Push') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github-creds-id', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASS')]) {
+                withCredentials([usernamePassword(credentialsId: '388374f4-be64-4263-b710-b3baf7adeefe', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASS')]) {
                     bat '''
                         git config --global user.email "manish_8778@yahoo.com"
                         git config --global user.name "Manish Shende"
