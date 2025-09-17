@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         DOTNET_ROOT = "C:\\Program Files\\dotnet"
+        PATH = "${env.DOTNET_ROOT};${env.PATH}"  // Include dotnet in PATH if needed
     }
-	
 
     stages {
         stage('Checkout') {
