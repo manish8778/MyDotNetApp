@@ -48,11 +48,12 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: '388374f4-be64-4263-b710-b3baf7adeefe', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_PASS')]) {
                     bat '''
-                        git config --global user.email "manish_8778@yahoo.com"
-                        git config --global user.name "Manish Shende"
-                        git add .
-                        git commit -m "Automated commit from Jenkins"
-                        git push https://%GIT_USER%:%GIT_PASS%@github.com/manish8778/MyDotNetApp.git master
+                        echo This is a new file created by Jenkins > newfile.txt
+                git config --global user.email "manish_8778@yahoo.com"
+                git config --global user.name "Manish Shende"
+                git add newfile.txt
+                git commit -m "Add newfile.txt from Jenkins"
+                git push https://%GIT_USER%:%GIT_PASS%@github.com/manish8778/MyDotNetApp.git master
                     '''
                 }
             } // close steps
