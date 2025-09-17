@@ -55,7 +55,8 @@ pipeline {
                         git push https://%GIT_USER%:%GIT_PASS%@github.com/manish8778/MyDotNetApp.git master
                     '''
                 }
-            }
+            } // close steps
+        } // close stage 'Commit and Push'
     }
 
     post {
@@ -63,5 +64,4 @@ pipeline {
             echo 'Pipeline completed.'
         }
     }
-}
 }
